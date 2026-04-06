@@ -17,7 +17,7 @@ app.use(express.json());
 
 // 🔐 CONFIG
 const ONESIGNAL_APP_ID = '394d5efc-c682-4cdb-9c88-bc52d271cc20';
-const ONESIGNAL_API_KEY = 'os_v2_app_hfgv57ggqjgnxheixrjne4omeb6qxk3maaquvcfa2qgiechrl52n5toidzdn6teymcqxxv7cebig7zqkw5xcuvak3qnfedydijvgk7a'; // ⚠️ change this later
+const ONESIGNAL_API_KEY = 'os_v2_app_hfgv57ggqjgnxheixrjne4omeci2k2vfqiae6kvcixeu5p5qghhqnao2ssz22zqiclsxxd6pvhmv7eu6j3sqmh6ycmjjdjwkg7xgttq'; // ⚠️ change this later
 
 // 🔥 SEND PUSH
 app.post('/sendPush', async (req, res) => {
@@ -32,7 +32,7 @@ app.post('/sendPush', async (req, res) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Basic ${ONESIGNAL_API_KEY}`
+        'Authorization': `key os_v2_app_hfgv57ggqjgnxheixrjne4omeci2k2vfqiae6kvcixeu5p5qghhqnao2ssz22zqiclsxxd6pvhmv7eu6j3sqmh6ycmjjdjwkg7xgttq`
       },
       body: JSON.stringify({
         app_id: ONESIGNAL_APP_ID,
