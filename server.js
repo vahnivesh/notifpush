@@ -1,14 +1,23 @@
-
-
 const express = require('express');
 const fetch = require('node-fetch');
+const cors = require('cors');   // ✅ ADD THIS
 
 const app = express();
+
+// ✅ ADD THIS BLOCK
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
+
+app.options('*', cors()); // ✅ CRITICAL (preflight fix)
+
 app.use(express.json());
 
-// 🔐 CONFIG (replace these)
+// 🔐 CONFIG
 const ONESIGNAL_APP_ID = '394d5efc-c682-4cdb-9c88-bc52d271cc20';
-const ONESIGNAL_API_KEY = 'os_v2_app_hfgv57ggqjgnxheixrjne4omeb6qxk3maaquvcfa2qgiechrl52n5toidzdn6teymcqxxv7cebig7zqkw5xcuvak3qnfedydijvgk7a';
+const ONESIGNAL_API_KEY = 'os_v2_app_hfgv57ggqjgnxheixrjne4omeb6qxk3maaquvcfa2qgiechrl52n5toidzdn6teymcqxxv7cebig7zqkw5xcuvak3qnfedydijvgk7a'; // ⚠️ change this later
 
 // 🔥 SEND PUSH
 app.post('/sendPush', async (req, res) => {
