@@ -32,7 +32,7 @@ app.post('/sendPush', async (req, res) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `basic os_v2_app_hfgv57ggqjgnxheixrjne4omeci2k2vfqiae6kvcixeu5p5qghhqnao2ssz22zqiclsxxd6pvhmv7eu6j3sqmh6ycmjjdjwkg7xgttq`
+        'Authorization': `key ${ONESIGNAL_API_KEY}`
       },
       body: JSON.stringify({
         app_id: ONESIGNAL_APP_ID,
