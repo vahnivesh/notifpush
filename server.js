@@ -17,7 +17,7 @@ app.use(express.json());
 
 // 🔐 CONFIG
 const ONESIGNAL_APP_ID = '394d5efc-c682-4cdb-9c88-bc52d271cc20';
-const ONESIGNAL_API_KEY = 'os_v2_app_hfgv57ggqjgnxheixrjne4omeby5li74rchedg5epbh3jbevh6756pwsdquutpui6z7e4rteykuamighzpnm4pjoz5zzecrgoryrjoa'; // ⚠️ change this later
+const ONESIGNAL_API_KEY = 'os_v2_app_hfgv57ggqjgnxheixrjne4omed5ooxigukfeasfbmzyebmlrpzmwutdwelhh56u44v2jvg2feywul4q4z43jhkw2gshf3fap7rqsayi'; // ⚠️ change this later
 
 // 🔥 SEND PUSH
 app.post('/sendPush', async (req, res) => {
